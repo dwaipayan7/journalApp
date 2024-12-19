@@ -31,8 +31,8 @@ public class UserController {
     // Update an existing user
     @PutMapping("/{username}")
     public ResponseEntity<?> updateUser(
-            @PathVariable String username,
-            @RequestBody User user
+            @RequestBody User user,
+            @PathVariable String username
     ) {
         User userInDb = userService.findByUserName(username);
 
